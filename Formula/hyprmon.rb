@@ -8,8 +8,8 @@ class Hyprmon < Formula
   depends_on macos: :sonoma
 
   def install
-    prefix.install "Hyprmon.app"
-    bin.write_exec_script "#{prefix}/Hyprmon.app/Contents/MacOS/hyprmon"
+    prefix.install Dir["Hyprmon.app"]
+    bin.write_exec_script prefix/"Hyprmon.app/Contents/MacOS/hyprmon"
   end
 
   def caveats
@@ -19,10 +19,13 @@ class Hyprmon < Formula
 
       Configuration file:
         ~/.config/hyprmon/config.toml
+
+      To open the widget:
+        open -a "#{opt_prefix}/Hyprmon.app"
     CAVEATS
   end
 
   test do
-    system "#{bin}/hyprmon", "--version"
+    system bin/"hyprmon", "--version"
   end
 end
