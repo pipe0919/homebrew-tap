@@ -2,7 +2,7 @@ class Hyprmon < Formula
   desc "Hyprland-style system monitor widget for macOS (CPU/RAM/battery/processes/Claude usage)"
   homepage "https://github.com/pipe0919/hyprmon"
   url "https://github.com/pipe0919/hyprmon/releases/download/v0.1.0/hyprmon-0.1.0.tar.gz"
-  sha256 "db8372c108593da7921c6099a0336c081de57409d633995a150dadec89337db6"
+  sha256 "bc38dc9ef2de2bd3454c20017aee4803eb3e118d373340ed5f4bd1f1bd693c24"
   license "Apache-2.0"
 
   depends_on macos: :sonoma
