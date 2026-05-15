@@ -1,8 +1,8 @@
 class Hyprmon < Formula
-  desc "Hyprland-style system monitor widget for macOS (CPU/RAM/battery/processes/Claude usage)"
+  desc "macOS menubar widget: CPU, RAM, battery, top processes, Claude Code usage"
   homepage "https://github.com/pipe0919/hyprmon"
-  url "https://github.com/pipe0919/hyprmon/releases/download/v0.2.0/hyprmon-0.2.0.tar.gz"
-  sha256 "10675b5e04edd730737579587b7218a7f5295fd915257dc0f1ac5c137c3077e4"
+  url "https://github.com/pipe0919/hyprmon/releases/download/v0.4.0/hyprmon-0.4.0.tar.gz"
+  sha256 "f768b87f90558e72f1d5d68f400762617180f00d4af919265f4f972a86414945"
   license "Apache-2.0"
 
   depends_on macos: :sonoma
@@ -14,14 +14,18 @@ class Hyprmon < Formula
 
   def caveats
     <<~CAVEATS
-      To run on login:
-        hyprmon --install-agent
+      Launch the widget once and it installs a LaunchAgent automatically
+      so it restarts at login. Toggle this from the menubar item's
+      right-click menu (Launch at Login).
+
+      Open it:
+        open -a "#{opt_prefix}/Hyprmon.app"
 
       Configuration file:
         ~/.config/hyprmon/config.toml
 
-      To open the widget:
-        open -a "#{opt_prefix}/Hyprmon.app"
+      Theme picker:
+        Right-click the menubar icon → Theme.
     CAVEATS
   end
 
