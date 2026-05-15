@@ -1,8 +1,8 @@
 class Hyprmon < Formula
   desc "macOS menubar widget: CPU, RAM, battery, top processes, Claude Code usage"
   homepage "https://github.com/pipe0919/hyprmon"
-  url "https://github.com/pipe0919/hyprmon/releases/download/v0.4.0/hyprmon-0.4.0.tar.gz"
-  sha256 "f768b87f90558e72f1d5d68f400762617180f00d4af919265f4f972a86414945"
+  url "https://github.com/pipe0919/hyprmon/releases/download/v0.5.0/hyprmon-0.5.0.tar.gz"
+  sha256 "269c048a0e728dc2656c21acc61b94036a23400532546c1474176763080faaad"
   license "Apache-2.0"
 
   depends_on macos: :sonoma
